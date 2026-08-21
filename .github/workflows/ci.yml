@@ -2,24 +2,17 @@
 name:  Pipeline CI
 
 on: 
-  push:
-    branches: ["main"]
   pull_request:
-    branches: ["main"]
-  schedule:
-    - cron: '40 10 * * 1'
+    branches: ["main"] # pull_request CI 
 
 permissions:
   contents: read
 
-
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
     - name: Set up Python 3.13.0
       uses: actions/setup-python@v3
       with:
