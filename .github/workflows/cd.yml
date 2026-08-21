@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
-      uses: actions/checkout@6
+      uses: actions/checkout@v6
     - name: Set up Python 3.13.0
       uses: actions/setup-python@v3
       with: 
@@ -36,10 +36,9 @@ jobs:
     needs: deliver
     steps:
     - name: Checkout repository
-      uses: actions/checkout@6
+      uses: actions/checkout@v6
     - name: Download Exec
       uses: actions/upload-artifact@v5
       with:
         name: Mine-2d
         path: dist/Mine-2d
-        retention-days: 30
