@@ -1,9 +1,19 @@
 # Example file showing a circle moving on screen
-#import os
+import os
 import pygame
 
 # pygame setup
+
+print("DISPLAY =", os.environ.get("DISPLAY"))
+
 pygame.init()
+print("pygame init OK")
+
+screen = pygame.display.set_mode((1280, 720))
+
+print("driver =", pygame.display.get_driver())
+print("screen =", screen.get_size())
+
 screen = pygame.display.set_mode((1280, 720))
 background = pygame.image.load('./images/back.jpg')
 image_background = pygame.transform.scale(background, (1290, 720))
