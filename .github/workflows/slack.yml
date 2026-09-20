@@ -14,4 +14,4 @@ jobs:
           webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
           webhook-type: incoming-webhook
           payload: |
-            text: "Houve um novo push ${{ github.event.head_commit.author.name }} com a descrição $ {{ github.event.head_commit.message }} "
+            "text": "Houve um novo push realizado pelo ${{ github.event.head_commit.author.name }} com a descrição ${{ github.event.head_commit.message }}"
